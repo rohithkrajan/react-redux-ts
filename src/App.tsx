@@ -1,6 +1,8 @@
 import * as React from 'react';
 import './App.css';
 
+import { Button } from 'react-bootstrap';
+
 const logo = require('./logo.svg');
 
 class App extends React.Component {
@@ -12,6 +14,7 @@ class App extends React.Component {
           <h2>Welcome to React</h2>
         </div>
         <p className="App-intro">
+        <Button bsStyle="primary">Hello</Button>
           To get started, edit <code>src/App.tsx</code> and save to reload.
         </p>
       </div>
