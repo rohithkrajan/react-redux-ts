@@ -7,8 +7,12 @@
     "react": "^16.2.0",
     "react-bootstrap": "^0.31.5",
     "react-dom": "^16.2.0",
-    "react-router": "^4.2.0",
-    "react-scripts-ts": "2.8.0"
+    "react-redux": "^5.0.6",
+    "react-router": "^3.2.0",
+    "react-scripts-ts": "2.8.0",
+    "redux": "^3.7.2",
+    "redux-form": "^7.2.0",
+    "redux-promise": "^0.5.3"
   },
   "scripts": {
     "start": "concurrently --kill-others \"cross-env NODE_PATH=src react-scripts-ts start\" \"npm run server\"",
@@ -23,6 +27,10 @@
     "@types/node": "^8.5.2",
     "@types/react": "^16.0.31",
     "@types/react-dom": "^16.0.3",
+    "@types/react-redux": "^5.0.14",
+    "@types/react-router": "^3.0.13",
+    "@types/redux": "^3.6.0",
+    "@types/redux-promise": "^0.5.28",
     "axios": "^0.17.1",
     "concurrently": "^3.5.1",
     "cross-env": "^5.1.1",

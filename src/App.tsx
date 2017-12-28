@@ -1,21 +1,17 @@
 import * as React from 'react';
+//import * as ReactDOM from 'react-dom';
 import './App.css';
 
 //import { Button } from 'react-bootstrap';
 //import HomePage from './components/Jumbotron'
-const logo = require('./logo.svg');
+//const logo = require('./logo.svg');
+//export interface HelloProps { compiler: string; framework: string; }
 
 class App extends React.Component {
   render() {
     return (
-      <div className="App">        
-        <p className="App-intro">        
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
+      <div>
+        {this.props.children}
       </div>
     );
   }
