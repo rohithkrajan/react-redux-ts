@@ -8,7 +8,7 @@ export default class HomePage extends React.Component {
 
     return (
 
-      <div className="jumbotron">
+      <div id="hello" className="jumbotron">
 
         <h1 className="display-3 text-center">{"React app"}</h1>
 
