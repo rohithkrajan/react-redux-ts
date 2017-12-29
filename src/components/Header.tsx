@@ -1,52 +1,50 @@
 import * as React from "react";
+import { Link } from 'react-router';
 
+export interface HeaderProps
+{
+    type:string,
+    id?:string
+}
 
+export default class Header extends React.Component<HeaderProps,object> {
 
-export default class Header extends React.Component {
-    renderLinks():JSX.Element {
-        return (
-        <nav className="navbar navbar-default navbar-static-top">
-            <div id="navbar" className="navbar-collapse collapse">
-                <div className="container">
-                    <ul className="nav  nav-pills navbar-right">
-                        
-                    </ul>
-
-                </div>
-            </div>
-        </nav>
-        );
+   public  renderLinks(): JSX.Element {
+        const { type } = this.props;
+        if (type==="merchants_index") {
+            return (
+                <ul className="nav  nav-pills navbar-right">
+                <li style={{ paddingRight: '10px' }} role="presentation">
+                    <Link className="text-xs-right" style={{ color: '#337ab7', fontSize: '17px' }} 
+                    to="/merchant/new">New Merchant</Link>
+                </li>
+            </ul>
+            );
+        }
+        else         
+            return (
+                <div></div>
+            );
     }
     public render() {
         return (
             <div>
-                {this.renderLinks()}
+                
+                <nav className="navbar navbar-default navbar-static-top">
+                <div id="navbar" className="navbar-collapse collapse">
+                    <div className="container">
+                        <ul className="nav  nav-pills navbar-left">
+                            <li style={{ paddingRight: '10px' }} role="presentation">
+                                <Link className="text-xs-right" 
+                                style={{ color: '#337ab7', fontSize: '17px' }} to="/">Home</Link>
+                            </li>
+                        </ul>
+                        {this.renderLinks()}
+                    </div>
+                </div>
+            </nav>
             </div>
         );
     }
-
-  public render2() {
-
-    return (
-
-      <div id="hello" className="jumbotron">
-
-        <h1 className="display-3 text-center">{"React app"}</h1>
-
-        <p className="lead text-center">
-
-          {
-
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel augue turpis. Suspendisse malesuada lacus nec metus pharetra sodales. Nunc tellus quam, mollis a dictum et, luctus maximus libero."
-
-          }
-
-        </p>
-
-      </div>
-
-    );
-
-  }
 
 }
