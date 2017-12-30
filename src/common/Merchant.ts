@@ -1,4 +1,4 @@
-interface Merchant
+export interface Merchant
 {
     id:number;
     firstName:string;
@@ -10,7 +10,7 @@ interface Merchant
     bids:Bid[];
 }
 
-interface Bid
+export interface Bid
 {
     id:string;
     carTitle:string;

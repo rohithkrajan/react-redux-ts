@@ -5,16 +5,18 @@ import {FETCH_MERCHANTS,FETCH_MERCHANTS_FAILURE,FETCH_MERCHANTS_SUCCESS,RESET_ME
 
 export function merchantsReducer(state:StoreState,action:MerchantsAction):StoreState
 {
+    let error:any;
     switch(action.type)
     {
         case FETCH_MERCHANTS:
-            return {...state};
+            return {...state,merchantsList:{merchants:[],error:null,loading:true}};
         case FETCH_MERCHANTS_SUCCESS:
-            return {...state};
+            return {...state,merchantsList:{merchants:action.payload,error:null,loading:false}};
         case FETCH_MERCHANTS_FAILURE:
-            return {...state};
+        error=action.payload||{message:action.payload.message};
+            return {...state,merchantsList:{merchants:[],error:error,loading:false}};
         case RESET_MERCHANTS:
-            return {...state};
+            return {...state,merchantsList:{merchants:[],error:null,loading:false}};
     }
     return state;
 }
