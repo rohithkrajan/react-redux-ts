@@ -1,7 +1,7 @@
 import axios, { AxiosPromise } from 'axios';
 import * as constants from '../constants'
-import {Merchant} from '../common/Merchant';
-const ROOT_URL = location.href.indexOf('localhost') > 0 ? 'http://localhost:3000/api' : '/api';
+import { Merchant } from '../common/Merchant';
+const ROOT_URL = location.href.indexOf('localhost') > 0 ? 'http://localhost:3001' : '/api';
 
 //merchant list
 
@@ -49,7 +49,7 @@ export interface ResetMerchants {
   type: constants.RESET_MERCHANTS
 }
 
-export type MerchantsAction=FetchMerchants|FetchMerchantsSuccess|FetchMerchantsFailure|ResetMerchants;
+export type MerchantsAction = FetchMerchants | FetchMerchantsSuccess | FetchMerchantsFailure | ResetMerchants;
 
 export function fetchMerchants(): FetchMerchants {
   const request = axios({

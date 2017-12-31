@@ -8,7 +8,7 @@ export interface MerchantsList
 }
 export interface MerchantData
 {
-    merchant:Merchant;
+    merchant:Merchant|null;
     error:any;
     loading:boolean;
 }
