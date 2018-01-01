@@ -9,12 +9,42 @@
     ],
     "Merchants": [
         {
-            "id": "string",
-            "firstname": "string",
-            "lastname": "string",
+            "id": "1",
+            "firstName": "John",
+            "lastName": "Honai",
             "avatarUrl": "string",
-            "email": "string",
+            "email": "john@gmail.com",
+            "phone": "91-9845488486",
+            "hasPremium": false,
+            "bids": []
+        },
+        {
+            "id": "2",
+            "firstName": "Rohith",
+            "lastName": "Rajan",
+            "avatarUrl": "string",
+            "email": "rohithrajan@gmail.com",
+            "phone": "91-9845488486",
+            "hasPremium": false,
+            "bids": []
+        },
+        {
+            "id": "3",
+            "firstName": "Scott",
+            "lastName": "Hanselman",
+            "avatarUrl": "string",
+            "email": "scott@hotmail.com",
             "phone": "string",
+            "hasPremium": false,
+            "bids": []
+        },
+        {
+            "id": "4",
+            "firstName": "Phil",
+            "lastName": "Haack",
+            "avatarUrl": "string",
+            "email": "phil@gmail.com",
+            "phone": "848484844",
             "hasPremium": false,
             "bids": []
         }

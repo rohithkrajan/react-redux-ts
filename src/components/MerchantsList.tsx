@@ -9,13 +9,13 @@ export interface MerchantsListProps
     fetchPosts:()=>any;
 }
 
-export class MerchantsList extends React.Component<MerchantsListProps> {
+export class MerchantsList extends React.Component<MerchantsListProps,object> {
     componentWillMount() {
       this.props.fetchPosts();
     }   
   
     renderMerchants(merchants:Merchant[]) {
-      return merchants.map((merchant) => {
+      return merchants.map((merchant) => {        
         return (
           <li className="list-group-item" key={merchant.id}>
             <Link style={{color:'black'}} to={"posts/" + merchant.id}>
