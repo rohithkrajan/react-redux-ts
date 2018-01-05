@@ -1,7 +1,7 @@
 import axios, { AxiosPromise } from 'axios';
 import * as constants from '../constants'
 import { Merchant } from '../common/Merchant';
-const ROOT_URL = location.href.indexOf('localhost') > 0 ? 'http://localhost:3001' : '/api';
+import { ROOT_URL } from './index';
 
 //merchant list
 
