@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router';
 import * as merchantTypes from '../types/index';
 import { Merchant } from '../common/Merchant';
+import {Table} from 'react-bootstrap';
 
 export interface MerchantsListProps  
 {
@@ -37,6 +38,31 @@ export class MerchantsList extends React.Component<MerchantsListProps,object> {
   
       return (
         <div className="container">
+        <Table striped bordered condensed hover>
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Username</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Mark</td>
+				<td>Otto</td>
+				<td>@mdo</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Jacob</td>
+				<td>Thornton</td>
+				<td>@fat</td>
+			</tr>
+			
+		</tbody>
+	</Table>
           <h1>Merchants</h1>
           <ul className="list-group">
             {this.renderMerchants(merchants)}
@@ -47,5 +73,5 @@ export class MerchantsList extends React.Component<MerchantsListProps,object> {
   }
   
   
-  //export default MerchantsList;
+//export default MerchantsList;
   

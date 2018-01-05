@@ -19,7 +19,7 @@
     "build": "cross-env NODE_PATH=src react-scripts-ts build",
     "test": "cross-env NODE_PATH=src react-scripts-ts test --env=jsdom",
     "eject": "cross-env NODE_PATH=src react-scripts-ts eject",
-    "server": "json-server --watch --port 3001 db.json"
+    "server": "json-server --watch --port 3001 ./src/api/db.json"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
@@ -28,6 +28,7 @@
     "@types/jest": "^21.1.9",
     "@types/node": "^8.5.2",
     "@types/react": "^16.0.31",
+    "@types/react-bootstrap": "^0.31.9",
     "@types/react-dom": "^16.0.3",
     "@types/react-redux": "^5.0.14",
     "@types/react-router": "^3.0.13",
