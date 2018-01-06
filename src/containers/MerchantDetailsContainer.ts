@@ -5,15 +5,19 @@ import {fetchMerchant,fetchMerchantSuccess,fetchMerchantFailure,MerchantDetailAc
 import {MerchantDetail} from '../components/MerchantDetails';
 import {StoreState} from '../types/index';
 
-
-function mapStateToProps({activeMerchant}:StoreState) {
-  return{activeMerchant};
+export interface MerchantDetailsContainerProps  
+{   
+    merchantId:string;    
 }
+
+function mapStateToProps(globalstate:StoreState) {
+    return{activeMerchant:globalstate.activeMerchant,merchantId:"1"};
+  }
 
 const mapDispatchToProps = (dispatch:Dispatch<MerchantDetailAction>) => {
     return {        
-        fetchMerchant: () => {
-          dispatch(fetchMerchant()).payload.then((response:any) => {
+        fetchMerchant: (id:string) => {
+          dispatch(fetchMerchant(id)).payload.then((response:any) => {
                 !response.error ? dispatch(fetchMerchantSuccess(response.data)) : dispatch(fetchMerchantFailure(response.payload.data));
               }).catch((reason:any)=>{
                 dispatch(fetchMerchantFailure(reason));

@@ -6,8 +6,8 @@ import {MerchantsList} from '../components/MerchantsList';
 import {StoreState} from '../types/index';
 
 
-function mapStateToProps({merchantsList}:StoreState) {
-  return{merchantsList};
+function mapStateToProps(globalstate:StoreState) {
+  return{merchantsList:globalstate.merchantsList};
 }
 
 const mapDispatchToProps = (dispatch:Dispatch<FetchMerchants>) => {

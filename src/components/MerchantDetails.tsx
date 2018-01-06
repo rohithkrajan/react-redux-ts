@@ -7,12 +7,13 @@ import { Merchant } from '../common/Merchant';
 export interface MerchantDetailsProps  
 {
     activeMerchant:merchantTypes.MerchantData;
-    fetchMerchant:()=>any;
+    merchantId:string;
+    fetchMerchant:(id:string)=>any;
 }
 
 export class MerchantDetail extends React.Component<MerchantDetailsProps,object> {
-    componentWillMount() {
-      this.props.fetchMerchant();
+    componentDidMount() {
+      this.props.fetchMerchant(this.props.merchantId);
     }   
   
     renderMerchant(merchant:Merchant|null) {     

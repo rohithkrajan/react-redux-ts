@@ -38,7 +38,7 @@ export class MerchantsList extends React.Component<MerchantsListProps,object> {
   
       return (
         <div className="container">
-        <Table striped bordered condensed hover>
+        <Table striped bordered condensed hover>        
 		<thead>
 			<tr>
 				<th>#</th>
