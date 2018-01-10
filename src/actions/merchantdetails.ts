@@ -27,10 +27,10 @@ export interface ResetActiveMerchant {
 
 export type MerchantDetailAction = FetchMerchant | FetchMerchantSuccess | FetchMerchantFailure | ResetActiveMerchant;
 
-export function fetchMerchant(): FetchMerchant {
+export function fetchMerchant(id:string): FetchMerchant {
   const request = axios({
     method: 'get',
-    url: `${ROOT_URL}/merchants`,
+    url: `${ROOT_URL}/merchants/${id}`,
     headers: []
   });
   return {

@@ -1,28 +1,39 @@
-{
-    "Bids": [
-        {
-            "id": "1",
-            "carTitle": "Audi",
-            "amount": 30000,
-            "created": "string"
-        }
-    ],
+{    
     "Merchants": [
         {
             "id": "1",
             "firstName": "John",
             "lastName": "Honai",
-            "avatarUrl": "string",
+            "avatarUrl": null,
             "email": "john@gmail.com",
             "phone": "91-9845488486",
             "hasPremium": false,
-            "bids": []
+             "bids": [
+        {
+            "id": "1",
+            "carTitle": "Audi",
+            "amount": 30000,
+            "created": "string"
+        },
+        {
+            "id": "2",
+            "carTitle": "Ferrari",
+            "amount": 300000,
+            "created": "string"
+        },
+        {
+            "id": "3",
+            "carTitle": "Cadillac",
+            "amount": 30000,
+            "created": "string"
+        }
+    ]
         },
         {
             "id": "2",
             "firstName": "Rohith",
             "lastName": "Rajan",
-            "avatarUrl": "string",
+            "avatarUrl": null,
             "email": "rohithrajan@gmail.com",
             "phone": "91-9845488486",
             "hasPremium": false,
@@ -32,7 +43,7 @@
             "id": "3",
             "firstName": "Scott",
             "lastName": "Hanselman",
-            "avatarUrl": "string",
+            "avatarUrl":null,
             "email": "scott@hotmail.com",
             "phone": "string",
             "hasPremium": false,
@@ -42,7 +53,7 @@
             "id": "4",
             "firstName": "Phil",
             "lastName": "Haack",
-            "avatarUrl": "string",
+            "avatarUrl": null,
             "email": "phil@gmail.com",
             "phone": "848484844",
             "hasPremium": false,

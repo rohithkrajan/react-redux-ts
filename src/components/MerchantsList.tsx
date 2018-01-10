@@ -19,7 +19,7 @@ export class MerchantsList extends React.Component<MerchantsListProps,object> {
       return merchants.map((merchant) => {        
         return (
           <li className="list-group-item" key={merchant.id}>
-            <Link style={{color:'black'}} to={"posts/" + merchant.id}>
+            <Link style={{color:'black'}} to={"merchants/" + merchant.id}>
               <h3 className="list-group-item-heading">{merchant.firstName}</h3>
             </Link>              
           </li>

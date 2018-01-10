@@ -7,11 +7,11 @@ import {StoreState} from '../types/index';
 
 export interface MerchantDetailsContainerProps  
 {   
-    merchantId:string;    
+    id:string;    
 }
 
-function mapStateToProps(globalstate:StoreState) {
-    return{activeMerchant:globalstate.activeMerchant,merchantId:"1"};
+function mapStateToProps(globalstate:StoreState,ownProps:any) {    
+    return{activeMerchant:globalstate.activeMerchant,merchantId:ownProps.params.id};
   }
 
 const mapDispatchToProps = (dispatch:Dispatch<MerchantDetailAction>) => {

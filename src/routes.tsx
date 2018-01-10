@@ -10,6 +10,6 @@ export default (
     <Route path="/" component={App}>
       <IndexRoute component={MerchantIndex}/>
       <Route path="merchants/new" component={HomePage}/>
-      <Route path="merchant/:id" component={MerchantDetailsContainer}/>
+      <Route path="merchants/:id" component={MerchantDetailsContainer}/>
     </Route>
 )

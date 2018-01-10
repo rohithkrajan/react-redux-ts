@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { Link } from 'react-router';
+//import { Link } from 'react-router';
 import * as merchantTypes from '../types/index';
 import { Merchant } from '../common/Merchant';
 //import {Table} from 'react-bootstrap';
+import { BidsList } from './BidsList';
 
 export interface MerchantDetailsProps  
 {
@@ -20,11 +21,63 @@ export class MerchantDetail extends React.Component<MerchantDetailsProps,object>
         if(merchant!=null)        
         {
         return (
-          <li className="list-group-item" key={merchant.id}>
-            <Link style={{color:'black'}} to={"posts/" + merchant.id}>
-              <h3 className="list-group-item-heading">{merchant.firstName}</h3>
-            </Link>              
-          </li>
+          <div>         
+          <div className="row">
+          <div className="col-lg-12">
+            <div className="col-xs-12 col-sm-4">
+              <figure>
+                <img className="img-circle img-responsive" alt="" src={merchant.avatarUrl?merchant.avatarUrl:"http://placehold.it/300x300"}/>
+              </figure>
+              
+              <div className="row">
+                <div className="col-xs-12 social-btns">
+                  
+                    <div className="col-xs-3 col-md-1 col-lg-1 social-btn-holder">
+                      <a className="btn btn-social btn-block btn-google" href="#">
+                        <i className="fa fa-google"></i> </a>
+                    </div>
+                  
+                    <div className="col-xs-3 col-md-1 col-lg-1 social-btn-holder">
+                      <a className="btn btn-social btn-block btn-facebook" href="#">
+                        <i className="fa fa-facebook"></i> </a>
+                    </div>
+                  
+                    <div className="col-xs-3 col-md-1 col-lg-1 social-btn-holder">
+                      <a className="btn btn-social btn-block btn-twitter" href="#">
+                        <i className="fa fa-twitter"></i> </a>
+                    </div>
+                  
+                    <div className="col-xs-3 col-md-1 col-lg-1 social-btn-holder">
+                      <a className="btn btn-social btn-block btn-linkedin" href="#">
+                        <i className="fa fa-linkedin"></i> </a>
+                    </div>
+                  
+                    <div className="col-xs-3 col-md-1 col-lg-1 social-btn-holder">
+                      <a className="btn btn-social btn-block btn-github" href="#">
+                        <i className="fa fa-github"></i> </a>
+                    </div>
+                  
+                    <div className="col-xs-3 col-md-1 col-lg-1 social-btn-holder">
+                      <a className="btn btn-social btn-block btn-stackoverflow" href="#">
+                        <i className="fa fa-stack-overflow"></i> </a>
+                    </div>
+                  
+                </div>
+              </div>
+              
+            </div>
+
+            <div className="col-xs-12 col-sm-8">
+              <ul className="list-group">
+                <li className="list-group-item">{merchant.firstName} {merchant.lastName}</li>                
+                <li className="list-group-item"><i className="fa fa-phone"></i> {merchant.phone} </li>
+                <li className="list-group-item"><i className="fa fa-envelope"></i> {merchant.email}</li>
+              </ul>
+            </div>            
+          </div>
+          <BidsList bids={merchant.bids}/>
+          </div>
+         </div>
         ); 
         }  
         return;   
